@@ -1,0 +1,1097 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séraphin Kokou — Cybersécurité & Design</title>
+    <meta name="description"
+        content="Portfolio professionnel de Séraphin Kokou : Cybersécurité, Design Graphique, Entrepreneuriat et Sciences du Langage." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============================================================
+       HEADER / NAV
+  ============================================================ -->
+    <header id="header" class="header">
+        <div class="container header__inner">
+            <a href="#hero" class="logo" aria-label="Accueil">
+                <img src="mypic.png" alt="Séraphin Kokou" class="logo__photo" />
+            </a>
+            <nav class="nav" aria-label="Navigation principale">
+                <ul class="nav__list" id="navList">
+                    <li><a href="#hero" class="nav__link" data-section="hero">Accueil</a></li>
+                    <li><a href="#apropos" class="nav__link" data-section="apropos">À propos</a></li>
+                    <li><a href="#cyber" class="nav__link" data-section="cyber">Parcours Cybersécurité</a></li>
+                    <li><a href="#expertises" class="nav__link" data-section="expertises">Compétences</a></li>
+                    <li><a href="#projets" class="nav__link" data-section="projets">Projets</a></li>
+                    <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+       HERO
+  ============================================================ -->
+    <section id="hero" class="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <p class="hero__eyebrow">
+                <span class="dot dot--blue"></span> Disponible pour missions &amp; collaborations
+            </p>
+            <h1 class="hero__title">
+                La sécurité par<br />
+                <span class="gradient-text">la structure,</span><br />
+                l'impact par<br />
+                <span class="gradient-text--orange">le design.</span>
+            </h1>
+            <p class="hero__subtitle">
+                Cybersécurité · Graphisme certifié · Entrepreneuriat · Sciences du Langage
+            </p>
+            <div class="hero__cta-group">
+                <a href="#projets" class="btn btn--primary" id="ctaProjects">
+                    Découvrir mes projets
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn--ghost">Me contacter</a>
+            </div>
+            <div class="hero__badges">
+                <span class="badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    Google Cybersecurity
+                </span>
+                <button class="badge badge--green"
+                    onclick="openCertifViewer('https://docs.google.com/viewer?url=https://api.teachizy.fr/storage/734003db7ba18272d632febf59ca4ba0/3cc41d0f46073ba8d93ea9db2412437f/9e85f11c6c3e6aa2dcb19215daccf814.pdf&embedded=true','Vibe Coding')"
+                    aria-label="Voir certificat Vibe Coding">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                    Vibe Coding ↗
+                </button>
+                <span class="badge badge--orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    Mon Gombo — MVP
+                </span>
+                <span class="badge badge--purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                    Design Certifié
+                </span>
+            </div>
+        </div>
+        <div class="hero__scroll-hint">
+            <span>Défiler</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       À PROPOS
+  ============================================================ -->
+    <section id="apropos" class="section section--apropos">
+        <div class="container">
+            <div class="apropos__inner">
+
+                <!-- Colonne gauche : titre -->
+                <div class="apropos__label">
+                    <div class="section-label">
+                        <span class="dot dot--blue"></span> Qui suis-je ?
+                    </div>
+                    <h2 class="section-title">À <span class="gradient-text">propos</span></h2>
+                </div>
+
+                <!-- Colonne centre : photo -->
+                <div class="apropos__photo-wrap">
+                    <div class="apropos__photo-ring">
+                        <img src="mypic.png" alt="Photo de Séraphin Kokou" class="apropos__photo" />
+                    </div>
+                    <div class="apropos__photo-glow"></div>
+                    <div class="apropos__photo-name">
+                        <span class="apropos__name-line">SÉRAPHIN</span>
+                        <span class="apropos__name-line apropos__name-line--accent">KOKOU KAMEKPO</span>
+                    </div>
+                </div>
+
+                <!-- Colonne droite : texte + pilliers -->
+                <div class="apropos__content">
+                    <div class="apropos__quote-mark">&ldquo;</div>
+                    <p class="apropos__text">
+                        Entrepreneur dans l&rsquo;âme et passionné par la défense numérique, je me spécialise
+                        aujourd&rsquo;hui en <strong>Cybersécurité</strong>. Mon parcours est le reflet d&rsquo;une
+                        <em>curiosité insatiable</em> : du management d&rsquo;entreprise chez
+                        <strong>LORDPRINT</strong> à la précision d&rsquo;un <strong>Master en Sciences du
+                            Langage</strong>, j&rsquo;ai appris que la sécurité ne repose pas seulement sur le code,
+                        mais aussi sur une <em>analyse rigoureuse</em> et une <em>vision globale</em>.
+                        Aujourd&rsquo;hui, je combine ces expériences pour bâtir des environnements numériques
+                        plus sûrs.
+                    </p>
+                    <div class="apropos__pillars">
+                        <div class="apropos__pillar">
+                            <span class="apropos__pillar-icon apropos__pillar-icon--blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </span>
+                            <span>Cybersécurité</span>
+                        </div>
+                        <div class="apropos__pillar">
+                            <span class="apropos__pillar-icon apropos__pillar-icon--orange">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </span>
+                            <span>Entrepreneuriat</span>
+                        </div>
+                        <div class="apropos__pillar">
+                            <span class="apropos__pillar-icon apropos__pillar-icon--purple">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                </svg>
+                            </span>
+                            <span>Sciences du Langage</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       PARCOURS CYBERSÉCURITÉ
+  ============================================================ -->
+    <section id="cyber" class="section section--cyber">
+        <div class="container">
+            <div class="section-label">
+                <span class="dot dot--blue"></span> Formation en cours
+            </div>
+            <h2 class="section-title">Parcours <span class="gradient-text">Cybersécurité</span></h2>
+            <p class="section-subtitle">
+                En spécialisation active via la certification Google Cybersecurity, je développe
+                une expertise opérationnelle sur les processus de sécurité, l'analyse des risques et la défense réseau.
+            </p>
+
+            <div class="cyber__grid">
+                <!-- Timeline verticale -->
+                <div class="cyber__timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fondamentaux de la Cybersécurité</h3>
+                            <p>Domaines de sécurité, éthique professionnelle, principes CISSP, outils SOC et
+                                introduction aux cadres réglementaires.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Gestion des Risques</h3>
+                            <p>Cadre NIST Cybersecurity Framework, audits de conformité, classification des menaces et
+                                stratégies d'atténuation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                                <line x1="6" y1="6" x2="6.01" y2="6" />
+                                <line x1="6" y1="18" x2="6.01" y2="18" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Sécurité des Réseaux</h3>
+                            <p>Architecture TCP/IP, modèle OSI, protocoles sécurisés, vulnérabilités réseau et
+                                durcissement des infrastructures d'entreprise.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Linux et SQL</h3>
+                            <p>Outils d'analyste : maîtrise de la ligne de commande Linux, scripting bash et requêtes
+                                SQL pour l'investigation et l'analyse de logs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats / Compétences cyber -->
+                <div class="cyber__stats">
+                    <div class="stat-card" data-aos="fade-left">
+                        <div class="stat-card__icon stat-card__icon--blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <div class="stat-card__value counter" data-target="5">0</div>
+                        <div class="stat-card__label">Modules NIST maîtrisés</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-left">
+                        <div class="stat-card__icon stat-card__icon--orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <div class="stat-card__value">OSPF<br />PPP</div>
+                        <div class="stat-card__label">Protocoles réseau</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-left">
+                        <div class="stat-card__icon stat-card__icon--purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </div>
+                        <div class="stat-card__value">OSSEC</div>
+                        <div class="stat-card__label">Outil HIDS opérationnel</div>
+                    </div>
+                    <div class="stat-card stat-card--wide" data-aos="fade-left">
+                        <div class="stat-card__icon stat-card__icon--blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="9" y1="9" x2="15" y2="15" />
+                                <line x1="15" y1="9" x2="9" y2="15" />
+                            </svg>
+                        </div>
+                        <div class="stat-card__label">En cours de certification</div>
+                        <div class="stat-card__badge">Google Cybersecurity Certificate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       EXPERTISES COMPLÉMENTAIRES
+  ============================================================ -->
+    <section id="expertises" class="section section--expertises">
+        <div class="container">
+            <div class="section-label">
+                <span class="dot dot--orange"></span> Profil polyvalent
+            </div>
+            <h2 class="section-title">Expertises <span class="gradient-text--orange">Complémentaires</span></h2>
+            <p class="section-subtitle">
+                Un profil hybride au croisement de la technique, du créatif et du stratégique.
+            </p>
+            <div class="expertises__grid">
+
+                <div class="expertise-card" id="card-design" tabindex="0">
+                    <div class="expertise-card__glow expertise-card__glow--blue"></div>
+                    <div class="expertise-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+                        </svg>
+                    </div>
+                    <h3 class="expertise-card__title">Design &amp; Graphisme</h3>
+                    <p class="expertise-card__text">
+                        Création d'identités visuelles, chartes graphiques, supports print &amp; digital.
+                        Maîtrise des outils de création et des principes de composition visuelle.
+                    </p>
+                    <div class="expertise-card__tags">
+                        <span class="tag">Identité de marque</span>
+                        <span class="tag">Composition visuelle</span>
+                        <span class="tag">Print &amp; Digital</span>
+                    </div>
+                    <div class="expertise-card__cert">🎓 Certification Graphisme</div>
+                </div>
+
+                <div class="expertise-card" id="card-business" tabindex="0">
+                    <div class="expertise-card__glow expertise-card__glow--orange"></div>
+                    <div class="expertise-card__icon expertise-card__icon--orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="expertise-card__title">Gestion &amp; Business</h3>
+                    <p class="expertise-card__text">
+                        Manager opérationnel chez <strong>LORDPRINT</strong>. Gestion d'équipe, suivi de production,
+                        relation client et développement commercial. Vision entrepreneuriale affûtée.
+                    </p>
+                    <div class="expertise-card__tags">
+                        <span class="tag tag--orange">Management</span>
+                        <span class="tag tag--orange">Entrepreneuriat</span>
+                        <span class="tag tag--orange">LORDPRINT</span>
+                    </div>
+                    <div class="expertise-card__cert expertise-card__cert--orange">💼 Manager·e en activité</div>
+                </div>
+
+                <div class="expertise-card" id="card-language" tabindex="0">
+                    <div class="expertise-card__glow expertise-card__glow--purple"></div>
+                    <div class="expertise-card__icon expertise-card__icon--purple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="expertise-card__title">Expertise Linguistique</h3>
+                    <p class="expertise-card__text">
+                        Master 1 en Sciences du Langage. Analyse sémantique, rédaction administrative et
+                        professionnelle, communication institutionnelle et production de contenus.
+                    </p>
+                    <div class="expertise-card__tags">
+                        <span class="tag tag--purple">Analyse sémantique</span>
+                        <span class="tag tag--purple">Rédaction professionnelle</span>
+                        <span class="tag tag--purple">Communication</span>
+                    </div>
+                    <div class="expertise-card__cert expertise-card__cert--purple">📚 Master 1 — Sciences du Langage
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       PROJETS & MINI-PROJETS — Section unifiée
+  ============================================================ -->
+    <section id="projets" class="section section--projets">
+        <div class="container">
+            <div class="section-label">
+                <span class="dot dot--blue"></span> Portfolio
+            </div>
+            <h2 class="section-title">Mes <span class="gradient-text">Projets</span></h2>
+            <p class="section-subtitle">
+                Certifications, travaux pratiques de formation et réalisations à la croisée de la sécurité, du design et
+                du numérique.
+            </p>
+
+            <!-- Filtres -->
+            <div class="portfolio__filters" id="portfolioFilters">
+                <button type="button" class="filter-btn filter-btn--active" data-filter="all">Tous</button>
+                <button type="button" class="filter-btn" data-filter="lab">Mini-Projets</button>
+                <button type="button" class="filter-btn" data-filter="cyber">Cybersécurité</button>
+                <button type="button" class="filter-btn" data-filter="design">Design</button>
+                <button type="button" class="filter-btn" data-filter="reseau">Réseau</button>
+                <button type="button" class="filter-btn" data-filter="certif">Certifications</button>
+            </div>
+
+            <div class="portfolio__grid" id="portfolioGrid">
+
+                <!-- CERTIFICATIONS -->
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--green">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat project-card__cat--green">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Vibe Coding</h3>
+                        <p>Certification officielle en Vibe Coding — maîtrise des outils d'IA générative appliqués au
+                            développement logiciel. Flux de travail augmenté, prompting avancé et co-développement.</p>
+                        <div class="project-card__tags"><span class="tag tag--green">IA Générative</span><span
+                                class="tag tag--green">LLM</span><span class="tag tag--green">Prompting</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://docs.google.com/viewer?url=https://api.teachizy.fr/storage/734003db7ba18272d632febf59ca4ba0/3cc41d0f46073ba8d93ea9db2412437f/9e85f11c6c3e6aa2dcb19215daccf814.pdf&embedded=true','Vibe Coding')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Foundations of Cybersecurity</h3>
+                        <p>Certification Google — Fondamentaux de la cybersécurité : histoire, domaines de sécurité,
+                            outils SOC et cadres réglementaires.</p>
+                        <div class="project-card__tags"><span class="tag">Google</span><span class="tag">SOC</span><span
+                                class="tag">Fondamentaux</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://coursera.org/share/8eea7c63687d0f1094e22c4b326ad8f5','Foundations of Cybersecurity')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Play It Safe: Manage Security Risks</h3>
+                        <p>Certification Google — Gestion des risques : cadres NIST, audits de conformité,
+                            identification des menaces et stratégies de mitigation.</p>
+                        <div class="project-card__tags"><span class="tag">Google</span><span
+                                class="tag">NIST</span><span class="tag">Gestion des risques</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://coursera.org/share/a2c788f778304ed72d9a88cab232c222','Play It Safe: Manage Security Risks')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Connect and Protect: Networks &amp; Network Security</h3>
+                        <p>Certification Google — Sécurité des réseaux : architecture TCP/IP, protocoles sécurisés,
+                            attaques réseau et durcissement des infrastructures.</p>
+                        <div class="project-card__tags"><span class="tag">Google</span><span
+                                class="tag">TCP/IP</span><span class="tag">Sécurité réseau</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://coursera.org/share/f7df2ea592a150708da5690fb6682652','Connect and Protect')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Tools of the Trade: Linux and SQL</h3>
+                        <p>Certification Google — Outils fondamentaux de l'analyste : ligne de commande Linux, scripting
+                            shell et interrogation de bases de données SQL.</p>
+                        <div class="project-card__tags"><span class="tag">Google</span><span
+                                class="tag">Linux</span><span class="tag">SQL</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://coursera.org/share/4f2f122e55fd671ded235cb1da99c87e','Tools of the Trade: Linux and SQL')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Sound the Alarm: Detection and Response</h3>
+                        <p>Certification Google — Détection et réponse aux incidents : analyse des logs, outils SIEM,
+                            surveillance continue et gestion des alertes de sécurité.</p>
+                        <div class="project-card__tags"><span class="tag">Google</span><span
+                                class="tag">Détection</span><span class="tag">SIEM</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://coursera.org/share/ee7ea80b5a932127d2c68b450b4d6f70','Sound the Alarm: Detection and Response')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--certif" data-category="certif" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg></div>
+                        <span class="project-card__cat">Certification</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Assets, Threats, and Vulnerabilities</h3>
+                        <p>Certification Google — Actifs, menaces et vulnérabilités : identification des menaces,
+                            classification des actifs, cryptographie et gestion des vulnérabilités.</p>
+                        <div class="project-card__tags"><span class="tag">Google</span><span
+                                class="tag">Menaces</span><span class="tag">Vulnérabilités</span></div>
+                    </div>
+                    <div class="project-card__footer project-card__footer--certif">
+                        <span class="status-dot status-dot--done"></span> Certifié
+                        <button class="certif-link"
+                            onclick="openCertifViewer('https://coursera.org/share/d3990411c2ebcb2f5dc470e45f68f560','Assets, Threats, and Vulnerabilities')">Voir
+                            le certificat <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
+                    </div>
+                </article>
+
+                <!-- MINI-PROJETS -->
+
+                <!-- Lab 1 — Simulation Réseau -->
+                <article class="project-card project-card--lab" data-category="lab reseau" tabindex="0">
+                    <div class="project-card__top project-card__top--purple">
+                        <div class="project-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                                <line x1="6" y1="6" x2="6.01" y2="6" />
+                                <line x1="6" y1="18" x2="6.01" y2="18" />
+                            </svg>
+                        </div>
+                        <span class="project-card__cat project-card__cat--purple">Mini-Projet · Réseau</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Simulation Réseau <span class="project-card__sub">Cisco Packet Tracer</span></h3>
+                        <p>Conception et déploiement d'une infrastructure réseau d'entreprise complète avec
+                            segmentation, routage dynamique et sécurisation des accès WAN.</p>
+                        <div class="project-card__skills">
+                            <div class="skill-chip">VLAN</div>
+                            <div class="skill-chip">OSPF</div>
+                            <div class="skill-chip">VLSM</div>
+                            <div class="skill-chip">PPP/CHAP</div>
+                            <div class="skill-chip">DMZ</div>
+                        </div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <!-- Lab 2 — VPN -->
+                <article class="project-card project-card--lab" data-category="lab" tabindex="0">
+                    <div class="project-card__top project-card__top--purple">
+                        <div class="project-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <span class="project-card__cat project-card__cat--purple">Mini-Projet</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Sécurisation des accès <span class="project-card__sub">VPN</span></h3>
+                        <p>Mise en place d'un serveur OpenVPN sécurisé avec infrastructure PKI complète, gestion de
+                            certificats et tunnels chiffrés.</p>
+                        <div class="project-card__skills">
+                            <div class="skill-chip">OpenVPN</div>
+                            <div class="skill-chip">PKI</div>
+                            <div class="skill-chip">Diffie-Hellman</div>
+                            <div class="skill-chip">HMAC</div>
+                            <div class="skill-chip">Tunnels</div>
+                        </div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <!-- Lab 3 — Audit Sécurité -->
+                <article class="project-card project-card--lab" data-category="lab" tabindex="0">
+                    <div class="project-card__top project-card__top--purple">
+                        <div class="project-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4" />
+                                <path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3c1.55 0 3 .38 4.29 1.05" />
+                            </svg>
+                        </div>
+                        <span class="project-card__cat project-card__cat--purple">Mini-Projet</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Audit de Sécurité <span class="project-card__sub">Système</span></h3>
+                        <p>Audit de sécurité complet d'un système d'information en appliquant le framework NIST CSF :
+                            identification, protection, détection, réponse et récupération.</p>
+                        <div class="project-card__skills">
+                            <div class="skill-chip">NIST CSF</div>
+                            <div class="skill-chip">Vulnérabilités</div>
+                            <div class="skill-chip">Conformité</div>
+                            <div class="skill-chip">Gestion des risques</div>
+                        </div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <!-- Lab 4 — SQL Threat Analysis -->
+                <article class="project-card project-card--lab" data-category="lab" tabindex="0">
+                    <div class="project-card__top project-card__top--purple">
+                        <div class="project-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                            </svg>
+                        </div>
+                        <span class="project-card__cat project-card__cat--purple">Mini-Projet</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Analyse de Menaces <span class="project-card__sub">SQL</span></h3>
+                        <p>Investigation de base de données de sécurité pour détecter des activités suspectes, analyser
+                            les logs de connexion et identifier des menaces internes.</p>
+                        <div class="project-card__skills">
+                            <div class="skill-chip">SQL</div>
+                            <div class="skill-chip">Log Analysis</div>
+                            <div class="skill-chip">Insider Threats</div>
+                            <div class="skill-chip">Investigation</div>
+                        </div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <!-- Lab 5 — Linux Admin -->
+                <article class="project-card project-card--lab" data-category="lab" tabindex="0">
+                    <div class="project-card__top project-card__top--purple">
+                        <div class="project-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                        </div>
+                        <span class="project-card__cat project-card__cat--purple">Mini-Projet</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Administration &amp; Scripting <span class="project-card__sub">Linux</span></h3>
+                        <p>Administration système Linux complète : gestion des permissions, automatisation de tâches via
+                            scripts Bash et versionnement de code avec Git/GitHub.</p>
+                        <div class="project-card__skills">
+                            <div class="skill-chip">Linux CLI</div>
+                            <div class="skill-chip">Permissions</div>
+                            <div class="skill-chip">Bash</div>
+                            <div class="skill-chip">Git/GitHub</div>
+                        </div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <!-- Lab 6 — C Programming -->
+                <article class="project-card project-card--lab" data-category="lab" tabindex="0">
+                    <div class="project-card__top project-card__top--purple">
+                        <div class="project-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="10" y1="13" x2="14" y2="13" />
+                            </svg>
+                        </div>
+                        <span class="project-card__cat project-card__cat--purple">Mini-Projet</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Programmation Bas Niveau <span class="project-card__sub">Langage C</span></h3>
+                        <p>Développement en C avec manipulation avancée de la mémoire, implémentation d'algorithmes de
+                            tri et traitement de chaînes de caractères.</p>
+                        <div class="project-card__skills">
+                            <div class="skill-chip">Pointeurs</div>
+                            <div class="skill-chip">Mémoire</div>
+                            <div class="skill-chip">Algorithmes de tri</div>
+                            <div class="skill-chip">Strings</div>
+                        </div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+                <!-- CYBERSÉCURITÉ -->
+
+                <article class="project-card" data-category="cyber" tabindex="0">
+                    <div class="project-card__top project-card__top--blue">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg></div>
+                        <span class="project-card__cat">Cybersécurité</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Plan de réponse aux incidents</h3>
+                        <p>Élaboration d'un IRP structuré selon les phases PICERL. Procédures d'escalade et
+                            communication de crise.</p>
+                        <div class="project-card__tags"><span class="tag">IRP</span><span class="tag">PICERL</span><span
+                                class="tag">SOC</span></div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <!-- DESIGN -->
+
+                <article class="project-card" data-category="design" tabindex="0">
+                    <div class="project-card__top project-card__top--orange">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85" />
+                            </svg></div>
+                        <span class="project-card__cat">Design</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>Identités visuelles — LORDPRINT</h3>
+                        <p>Conception de chartes graphiques et d'identités de marque pour clients de l'imprimerie.
+                            Affiches, cartes de visite, supports événementiels.</p>
+                        <div class="project-card__tags"><span class="tag tag--orange">Identité de marque</span><span
+                                class="tag tag--orange">Print</span></div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--done"></span> Complété</div>
+                </article>
+
+                <article class="project-card" data-category="design" tabindex="0">
+                    <div class="project-card__top project-card__top--orange">
+                        <div class="project-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="3" y1="9" x2="21" y2="9" />
+                                <line x1="9" y1="21" x2="9" y2="9" />
+                            </svg></div>
+                        <span class="project-card__cat">Design</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3>UI/UX — Interfaces numériques</h3>
+                        <p>Conception d'interfaces mobiles et web modernes. Wireframing, prototypage et tests
+                            utilisateur pour des expériences intuitives.</p>
+                        <div class="project-card__tags"><span class="tag tag--orange">UI/UX</span><span
+                                class="tag tag--orange">Mobile-first</span></div>
+                    </div>
+                    <div class="project-card__footer"><span class="status-dot status-dot--progress"></span> En cours
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- ============================================================
+       HACKATHON — Projet phare
+  ============================================================ -->
+    <section id="gombo" class="section section--gombo">
+        <div class="gombo__bg-pattern"></div>
+        <div class="container">
+            <div class="gombo__inner">
+                <div class="gombo__text">
+                    <div class="section-label">
+                        <span class="dot dot--orange"></span> Projet Hackathon
+                    </div>
+                    <h2 class="section-title">
+                        <span class="gradient-text--orange">Mon Gombo</span>
+                    </h2>
+                    <p class="gombo__lead">
+                        Plateforme de <strong>micro-jobs</strong> conçue en <strong>72h lors d'un hackathon</strong> —
+                        de la découverte terrain au pitch MVP, en passant par la conception de solution.
+                    </p>
+
+                    <!-- Timeline 3 jours -->
+                    <ul class="gombo__features hackathon-timeline">
+                        <li class="hackathon-day">
+                            <div class="hackathon-day__badge">J1</div>
+                            <div>
+                                <strong>Field Discovery &amp; Problem Framing</strong>
+                                <p>Immersion terrain pour identifier les besoins réels des PME locales
+                                    et des étudiants. Cadrage du problème, personas et opportunités.</p>
+                            </div>
+                        </li>
+                        <li class="hackathon-day">
+                            <div class="hackathon-day__badge">J2</div>
+                            <div>
+                                <strong>Solution Mapping &amp; Opportunity Design</strong>
+                                <p>Cartographie des solutions, priorisation des fonctionnalités et
+                                    architecture produit. Conception des flux utilisateurs clés.</p>
+                            </div>
+                        </li>
+                        <li class="hackathon-day">
+                            <div class="hackathon-day__badge">J3</div>
+                            <div>
+                                <strong>MVP Prototyping &amp; Pitching</strong>
+                                <p>Développement du prototype fonctionnel mobile-first et pitch final
+                                    devant jury : problème, solution, traction et business model.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="gombo__cta">
+                        <a href="#contact" class="btn btn--primary">
+                            En savoir plus sur le projet
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="gombo__visual">
+                    <div class="phone-mockup">
+                        <div class="phone-mockup__frame">
+                            <div class="phone-mockup__screen">
+                                <div class="mock-header">
+                                    <div class="mock-logo">Mon Gombo</div>
+                                    <div class="mock-notif">🔔</div>
+                                </div>
+                                <div class="mock-hero-banner">
+                                    <p>Trouve ton<br /><strong>prochain Gombo</strong></p>
+                                </div>
+                                <div class="mock-cards">
+                                    <div class="mock-job-card">
+                                        <span class="mock-job-icon">💻</span>
+                                        <div>
+                                            <strong>Dev Web — PME</strong>
+                                            <p>15 000 FCFA · 3 jours</p>
+                                        </div>
+                                        <span class="mock-apply">→</span>
+                                    </div>
+                                    <div class="mock-job-card">
+                                        <span class="mock-job-icon">🎨</span>
+                                        <div>
+                                            <strong>Flyer événement</strong>
+                                            <p>8 000 FCFA · 1 jour</p>
+                                        </div>
+                                        <span class="mock-apply">→</span>
+                                    </div>
+                                    <div class="mock-job-card">
+                                        <span class="mock-job-icon">📦</span>
+                                        <div>
+                                            <strong>Gestion stocks</strong>
+                                            <p>12 000 FCFA · 2 jours</p>
+                                        </div>
+                                        <span class="mock-apply">→</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-mockup__glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER / CONTACT
+  ============================================================ -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <!-- Contact form -->
+                <div class="footer__form-area">
+                    <div class="section-label">
+                        <span class="dot dot--blue"></span> Me contacter
+                    </div>
+                    <h2 class="footer__title">Travaillons <span class="gradient-text">ensemble.</span></h2>
+                    <form id="contactForm" class="contact-form" action="https://formsubmit.co/seraphinchama@gmail.com"
+                        method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Nom</label>
+                                <input type="text" id="contactName" name="name" placeholder="Votre nom" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="votre@email.com"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Sujet</label>
+                            <input type="text" id="contactSubject" name="subject"
+                                placeholder="Sujet de votre message" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5"
+                                placeholder="Décrivez votre projet ou votre collaboration..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary" id="submitBtn">
+                            Envoyer le message
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right side info -->
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <span class="logo"><span class="logo__bracket">[</span>SK<span
+                                class="logo__bracket">]</span></span>
+                        <p>Séraphin Kokou</p>
+                        <p class="footer__subtitle">Cybersécurité · Design · Entrepreneuriat</p>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/seraphin-kamekpo" target="_blank" class="social-link"
+                            aria-label="LinkedIn" id="socialLinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/ChamaofGod" target="_blank" class="social-link" aria-label="GitHub"
+                            id="socialGitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=seraphinchama@gmail.com" target="_blank"
+                            class="social-link" id="socialEmail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            Email
+                        </a>
+                    </div>
+                    <div class="footer__availability">
+                        <div class="avail-dot"></div>
+                        <p>Disponible pour des missions freelance &amp; collaborations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Séraphin Kokou — Tous droits réservés.</p>
+                <p>Portfolio construit avec ❤️ &amp; un soupçon de sécurité.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+       CERTIFICATE VIEWER MODAL
+    ============================================================ -->
+    <div id="certifModal" class="certif-modal" role="dialog" aria-modal="true" aria-label="Visualiseur de certificat">
+        <div class="certif-modal__overlay" onclick="closeCertifViewer()"></div>
+        <div class="certif-modal__box">
+            <div class="certif-modal__header">
+                <span class="certif-modal__title" id="certifModalTitle">Certificat</span>
+                <button class="certif-modal__close" onclick="closeCertifViewer()" aria-label="Fermer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="certif-modal__body">
+                <iframe id="certifFrame" src="" title="Visualiseur de certificat" allowfullscreen
+                    oncontextmenu="return false" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+            </div>
+            <div class="certif-modal__footer">
+                <span class="certif-modal__notice">🔒 Certificat en lecture seule — consultation uniquement</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
