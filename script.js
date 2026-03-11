@@ -491,3 +491,23 @@ document.addEventListener('DOMContentLoaded', () => {
     updateArrow();
 });
 
+/* ============================================================
+   11. MON GOMBO CAROUSEL
+============================================================ */
+function initGomboCarousel() {
+    const images = document.querySelectorAll('.gombo-img');
+    if (!images.length) return;
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+        images[currentIndex].classList.remove('gombo-img--active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('gombo-img--active');
+    }, 3000); // Change image every 3 seconds
+}
+
+// Initialize the carousel
+document.addEventListener('DOMContentLoaded', () => {
+    initGomboCarousel();
+});

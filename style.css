@@ -1363,140 +1363,113 @@ strong {
     color: var(--clr-text-muted);
 }
 
-/* Phone Mockup */
+/* Desktop Mockup */
 .gombo__visual {
     display: flex;
     justify-content: center;
     position: relative;
+    width: 100%;
 }
 
-.phone-mockup {
+.desktop-mockup {
     position: relative;
-    width: 260px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    animation: float 5s ease-in-out infinite;
 }
 
-.phone-mockup__frame {
-    background: var(--clr-bg-3);
-    border: 2px solid rgba(249, 115, 22, 0.3);
-    border-radius: 36px;
-    padding: 10px;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 32px 80px rgba(0, 0, 0, 0.6);
-    animation: float 4s ease-in-out infinite;
+.desktop-mockup__frame {
+    background: #1e293b;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px 12px 0 0;
+    padding: 12px 12px 16px 12px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 24px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-12px);
-    }
-}
-
-.phone-mockup__screen {
-    background: #0a1020;
-    border-radius: 28px;
-    overflow: hidden;
-    border: 1px solid var(--clr-border);
-}
-
-.mock-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-3) var(--space-4);
-    background: rgba(249, 115, 22, 0.08);
-    border-bottom: 1px solid rgba(249, 115, 22, 0.15);
-}
-
-.mock-logo {
-    font-family: var(--ff-display);
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--clr-orange), #facc15);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.mock-notif {
-    font-size: var(--fs-sm);
-}
-
-.mock-hero-banner {
-    padding: var(--space-4);
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(251, 146, 60, 0.05));
-    border-bottom: 1px solid rgba(249, 115, 22, 0.1);
-}
-
-.mock-hero-banner p {
-    font-size: var(--fs-sm);
-    color: var(--clr-text-muted);
-    line-height: 1.4;
-}
-
-.mock-hero-banner strong {
-    color: var(--clr-orange-light);
-}
-
-.mock-cards {
-    padding: var(--space-3);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-}
-
-.mock-job-card {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3);
-    background: var(--clr-surface);
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius-md);
-    transition: border-color var(--transition-fast);
-}
-
-.mock-job-card:hover {
-    border-color: rgba(249, 115, 22, 0.4);
-}
-
-.mock-job-icon {
-    font-size: var(--fs-lg);
-    flex-shrink: 0;
-}
-
-.mock-job-card>div strong {
-    display: block;
-    font-size: 11px;
-    color: #fff;
-}
-
-.mock-job-card>div p {
-    font-size: 10px;
-    color: var(--clr-text-muted);
-}
-
-.mock-apply {
-    margin-left: auto;
-    color: var(--clr-orange);
-    font-size: var(--fs-sm);
-    font-weight: 700;
-}
-
-.phone-mockup__glow {
+/* Webcam dot */
+.desktop-mockup__frame::before {
+    content: '';
     position: absolute;
-    bottom: -40px;
+    top: 6px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 6px;
+    height: 6px;
+    background: #0f172a;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.desktop-mockup__screen {
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.gombo__image-gallery {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+}
+
+.gombo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.gombo-img--active {
+    opacity: 1;
+}
+
+/* Base du PC portable */
+.desktop-mockup__base {
+    position: relative;
+    width: 110%;
+    left: -5%;
+    height: 14px;
+    background: linear-gradient(to bottom, #cbd5e1, #94a3b8);
+    border-radius: 0 0 12px 12px;
+    z-index: 3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+/* Encoche pour ouvrir */
+.desktop-mockup__base::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 4px;
+    background: #64748b;
+    border-radius: 0 0 4px 4px;
+}
+
+.desktop-mockup__glow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     height: 60px;
-    background: radial-gradient(ellipse, rgba(249, 115, 22, 0.3), transparent 70%);
-    filter: blur(20px);
-    z-index: -1;
+    background: radial-gradient(ellipse, rgba(249, 115, 22, 0.25), transparent 70%);
+    filter: blur(25px);
+    z-index: 1;
 }
 
 /* ============================================================
