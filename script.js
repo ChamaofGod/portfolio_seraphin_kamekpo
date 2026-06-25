@@ -100,6 +100,9 @@ function initHeroCanvas() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => { cancelAnimationFrame(animId); init(); animate(); }, 200);
     });
+
+    const defaultActiveBtn = document.querySelector('.filter-btn.active');
+    if (defaultActiveBtn) { defaultActiveBtn.click(); } else if (buttons.length > 0) { buttons[0].click(); }
 }
 
 /* ============================================================
@@ -137,6 +140,9 @@ function initMobileNav() {
             navList.parentElement.classList.remove('open');
         });
     });
+
+    const defaultActiveBtn = document.querySelector('.filter-btn.active');
+    if (defaultActiveBtn) { defaultActiveBtn.click(); } else if (buttons.length > 0) { buttons[0].click(); }
 }
 
 /* ============================================================
@@ -172,6 +178,9 @@ function initScrollAnimations() {
             }
         });
     });
+
+    const defaultActiveBtn = document.querySelector('.filter-btn.active');
+    if (defaultActiveBtn) { defaultActiveBtn.click(); } else if (buttons.length > 0) { buttons[0].click(); }
 }
 
 /* ============================================================
@@ -208,14 +217,11 @@ function initPortfolioFilter() {
     const cards = document.querySelectorAll('.project-card');
     if (!buttons.length || !cards.length) return;
 
-    // Make all cards visible initially
-    cards.forEach(card => card.classList.add('visible'));
-
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             // Update active button
-            buttons.forEach(b => b.classList.remove('filter-btn--active'));
-            btn.classList.add('filter-btn--active');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
             const filter = btn.dataset.filter;
 
@@ -234,6 +240,9 @@ function initPortfolioFilter() {
             });
         });
     });
+
+    const defaultActiveBtn = document.querySelector('.filter-btn.active');
+    if (defaultActiveBtn) { defaultActiveBtn.click(); } else if (buttons.length > 0) { buttons[0].click(); }
 }
 
 /* ============================================================
@@ -280,6 +289,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const top = target.getBoundingClientRect().top + window.scrollY - headerH;
         window.scrollTo({ top, behavior: 'smooth' });
     });
+
+    const defaultActiveBtn = document.querySelector('.filter-btn.active');
+    if (defaultActiveBtn) { defaultActiveBtn.click(); } else if (buttons.length > 0) { buttons[0].click(); }
 });
 
 /* ============================================================
